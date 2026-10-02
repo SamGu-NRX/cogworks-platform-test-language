@@ -41,10 +41,10 @@ class HashedWordSearch:
         self.image_vectors = np.zeros((0, DIMENSIONS), dtype=np.float32)
 
     def embed_text(self, captions):
-        rows = [_hashed_words(caption) for caption in captions]
-        if not rows:
-            return np.zeros((0, DIMENSIONS), dtype=np.float32)
-        return np.stack(rows)
+        # Deliberately malformed for the platform test: one 7-element vector
+        # instead of a (rows, D) matrix. Seven is below the benchmark's minimum
+        # width, so its per-caption retry cannot rescue it either.
+        return np.zeros(7, dtype=np.float32)
 
     def embed_images(self, descriptors):
         return np.asarray(descriptors, dtype=np.float32) @ self.projection
