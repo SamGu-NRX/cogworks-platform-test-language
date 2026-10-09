@@ -1,0 +1,12 @@
+tests/fixtures/malformed_submission.py is a VERBATIM byte copy of
+submission.py on branch "malformed" of this repository.
+
+  source commit : 4c6d54d5d42ba85436e43a579acc452bca6570d9
+  git blob sha  : 1784a8b79d6cea85d836ee58a49e8000b2728621
+  file sha256   : 2d6c9a7610913509118bc96f57b851ef8af51fb9e30c98a1b240372a1d6a7c7c
+
+Do not edit the copy: tests pin its sha256 (tests/fixtures_data.py,
+MALFORMED_SUBMISSION_SHA256) and fail if it drifts. To change the pin,
+re-copy from the malformed branch, update BOTH hashes here and in
+fixtures_data.py, and record the reason in the PR. The branch itself is
+never checked out or modified by the tests.
